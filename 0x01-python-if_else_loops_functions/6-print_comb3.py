@@ -1,6 +1,11 @@
 #!/usr/bin/python3
 
-for tens_digit in range(0, 9):
-    for ones_digit in range(tens_digit + 1, 10):
-        print("{:02d}".format(tens_digit), "{:02d}".format(ones_digit), end=", " if tens_digit < 8 or ones_digit < 9 else "\n")
+for i in range(9):
 
+    for j in range(i + 1, 10):
+
+        if i * 10 + j < 89:
+
+            print("{:d}{:d}".format(i, j), end=", ")
+
+print("{:d}".format(89))
